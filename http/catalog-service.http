@@ -1,0 +1,32 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+###
+
+
+### 카탈로그에 책 추가
+POST localhost:9001/books
+Content-Type: application/json
+
+{
+"author" : "Lyra Silverstar",
+"title" : "Northern Ligths",
+"isbn" : "1234567891",
+"price" : 9.90
+}
+
+### 카탈로그에 책 추가 (오류 테스트)
+POST localhost:9001/books
+Content-Type: application/json
+
+{
+"author" : "Lyra Silverstar",
+"title" : "",
+"isbn" : "123ACB891",
+"price" : 9.90
+}
+
+
+### 카탈로그 책 조회
+GET localhost:9001/books/1234567891
