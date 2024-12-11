@@ -30,3 +30,12 @@ Content-Type: application/json
 
 ### 카탈로그 책 조회
 GET localhost:9001/books/1234567891
+
+###
+GET localhost:9001/books
+
+###
+GET localhost:9001
+
+### config actuator refresh
+POST localhost:9001/actuator/refresh
